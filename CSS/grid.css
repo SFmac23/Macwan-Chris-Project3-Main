@@ -1,0 +1,46 @@
+/* === Grid System ===*/ 
+.container {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Mobile*/
+.col-span-1 { grid-column: span 1; }
+.col-span-2 { grid-column: span 2; }
+.col-span-3 { grid-column: span 3; }
+.col-span-4 { grid-column: span 4; }
+.col-span-6 { grid-column: span 6; }
+.col-span-11 { grid-column: span 11; }
+.col-span-12 { grid-column: span 12; }
+
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-12 { grid-template-columns: repeat(12, 1fr); }
+
+/* === Utility Classes === */
+.hide { display: none; }
+.show { display: block; }
+
+/* tablet*/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container { grid-template-columns: repeat(12, 1fr); }
+    .tablet-col-span-1 { grid-column: span 1; }
+    .tablet-col-span-4 { grid-column: span 4; }
+    .tablet-col-span-6 { grid-column: span 6; }
+    .tablet-col-span-11 { grid-column: span 11; }
+    .tablet-col-span-12 { grid-column: span 12; }
+
+    .tablet-show { display: block; }
+    .tablet-hide { display: none; }
+}
+/* Desktop*/
+@media (min-width: 1024px) {
+    .container { grid-template-columns: repeat(4, 1fr); }
+    .desktop-col-span-1 { grid-column: span 1; }
+    .desktop-col-span-2 { grid-column: span 2; }
+    .desktop-col-span-3 { grid-column: span 3; }
+    .desktop-col-span-4 { grid-column: span 4; }
+
+    .desktop-show { display: block; }
+    .desktop-hide { display: none; }
+}
+
